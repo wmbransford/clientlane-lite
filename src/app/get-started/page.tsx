@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 export default function GettingStarted() {
-  const githubURL = process.env.NEXT_PUBLIC_CLIENTLANE_GITHUB_URL;
+  const githubURL = process.env.NEXT_PUBLIC_CLIENTLANE_GITHUB_URL || "https://github.com/wmbransford/clientlane-lite/releases";
   const purchaseURL = process.env.NEXT_PUBLIC_CLIENTLANE_PURCHASE_URL;
   return (
     <main className="recovery-page">
@@ -60,8 +60,8 @@ export default function GettingStarted() {
             </p>
           )}
           <p className="text-sm text-muted-foreground">
-            macOS setup is verified. Windows and Linux launch scripts are
-            included, with native platform verification still pending. Your
+            Automated setup and persistence checks pass on macOS, Windows,
+            and Linux with Node 24. This is a release candidate. Your
             accounts and CRM data live on your installation. The online demo
             uses fictional data and resets on reload.
           </p>

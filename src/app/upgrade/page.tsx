@@ -36,10 +36,15 @@ export default function Upgrade() {
               <a href={purchaseURL}>Get Pro · $199</a>
             </Button>
           ) : (
-            <p className="text-sm text-muted-foreground">
-              The Pro release is being prepared. Checkout is not open in this
-              release candidate.
-            </p>
+            <>
+              <Button asChild>
+                <a href="https://clientlane-crm.vercel.app/#pricing">Explore Pro and try the demo</a>
+              </Button>
+              <p className="text-sm text-muted-foreground">
+                Checkout is not open in this release candidate. Check the
+                product website for availability.
+              </p>
+            </>
           )}
           <Button variant="outline" asChild>
             <Link href="/workspace">Back to workspace</Link>

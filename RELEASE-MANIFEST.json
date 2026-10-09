@@ -57,7 +57,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "b4bf80fb6eab71e3887ed56be85a7c3c7ca4d2bbd6f625735d1fa82d823afa05"
+      "sha256": "16f8d421b8d337f8fb78fd5bd54d96ad5610d51ec7c703a3a7b8f34b5942806e"
     },
     {
       "path": "scripts/local.mjs",
@@ -101,7 +101,7 @@
     },
     {
       "path": "src/app/get-started/page.tsx",
-      "sha256": "07ec71c5689b1271f6f0f9e929bd7f52e33e3ca3f5cc9075e6f23535e7382d31"
+      "sha256": "af392ee10d99aa03acf1c9c3008b801d499ecf2dce10eb4c55c71168410e4f75"
     },
     {
       "path": "src/app/globals.css",
@@ -129,7 +129,7 @@
     },
     {
       "path": "src/app/upgrade/page.tsx",
-      "sha256": "bb46bcdf38bd108aebb34fd16e3916241ba88d55b8e0f334f39acfafaee306e6"
+      "sha256": "5f85c99279527bbb953181c26ba397b79352c468ec5e5190503f2b5ecca43f33"
     },
     {
       "path": "src/app/workspace/page.tsx",
