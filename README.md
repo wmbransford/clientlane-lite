@@ -16,7 +16,7 @@ Install **Node.js 22.13 or newer** from https://nodejs.org (choose an LTS releas
 
 The first launch downloads dependencies and builds the application. It can take a few minutes and needs an internet connection. Later launches use the installed dependencies. Keep the terminal open while using the app; press Ctrl+C to stop it. Open http://localhost:4318 if a browser does not open automatically. If a launcher loses its executable permission after extraction, run `sh start-clientlane.sh` from the folder. Do not disable your operating system's security protections.
 
-Clientlane runs in your browser and binds to this computer's loopback interface. This package is not a signed native desktop application. Automated installation, build, account creation, and persistence checks passed on macOS, Windows, and Linux with Node 24. Browser workflows were also inspected on macOS. SQLite requires a compatible native Node module; if no prebuilt binary exists for your platform, the installer may need the platform's C/C++ build tools.
+Clientlane runs in your browser and binds to this computer's loopback interface. This package is not a signed native desktop application. The shared launcher and Lite distribution passed automated installation, build, account creation, and persistence checks on macOS, Windows, and Linux with Node 24. Pro installation and browser workflows were additionally verified on macOS. SQLite requires a compatible native Node module; if no prebuilt binary exists for your platform, the installer may need the platform's C/C++ build tools.
 
 For terminal users:
 
