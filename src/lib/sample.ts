@@ -1,0 +1,241 @@
+import type { State } from "./model";
+import { defaultSettings } from "./workspace-settings";
+export function sampleState(edition: "Lite" | "Pro" = "Lite"): State {
+  const now = new Date().toISOString();
+  const date = (offset: number) => {
+    const d = new Date();
+    d.setDate(d.getDate() + offset);
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  };
+  const meta = (id: string) => ({
+    id,
+    version: 1,
+    createdAt: now,
+    updatedAt: now,
+  });
+  return {
+    archived: [],
+    settings: defaultSettings(),
+    settingsVersion: 1,
+    workspace: { name: "Northstar Studio", edition },
+    companies: [
+      {
+        ...meta("co-1"),
+        name: "Forma Studio",
+        domain: "forma.example",
+        industry: "Architecture",
+      },
+      {
+        ...meta("co-2"),
+        name: "Goodkind",
+        domain: "goodkind.example",
+        industry: "Consumer goods",
+      },
+      {
+        ...meta("co-3"),
+        name: "North & Co.",
+        domain: "north.example",
+        industry: "Hospitality",
+      },
+      {
+        ...meta("co-4"),
+        name: "Orbit Labs",
+        domain: "orbit.example",
+        industry: "Technology",
+      },
+      {
+        ...meta("co-5"),
+        name: "Fieldwork",
+        domain: "fieldwork.example",
+        industry: "Design",
+      },
+    ],
+    contacts: [
+      {
+        ...meta("ct-1"),
+        name: "Olivia Chen",
+        email: "olivia@forma.example",
+        phone: "",
+        role: "Founder",
+        companyId: "co-1",
+        status: "Lead",
+      },
+      {
+        ...meta("ct-2"),
+        name: "James Wilson",
+        email: "james@goodkind.example",
+        phone: "",
+        role: "Marketing Director",
+        companyId: "co-2",
+        status: "Customer",
+      },
+      {
+        ...meta("ct-3"),
+        name: "Sofia Martinez",
+        email: "sofia@north.example",
+        phone: "",
+        role: "Co-founder",
+        companyId: "co-3",
+        status: "Lead",
+      },
+      {
+        ...meta("ct-4"),
+        name: "Ethan Brooks",
+        email: "ethan@orbit.example",
+        phone: "",
+        role: "Head of Growth",
+        companyId: "co-4",
+        status: "Lead",
+      },
+      {
+        ...meta("ct-5"),
+        name: "Maya Patel",
+        email: "maya@fieldwork.example",
+        phone: "",
+        role: "Creative Director",
+        companyId: "co-5",
+        status: "Partner",
+      },
+    ],
+    deals: [
+      {
+        ...meta("dl-1"),
+        name: "Brand identity & website",
+        companyId: "co-1",
+        contactId: "ct-1",
+        value: 1250000,
+        stage: "Proposal",
+        closeDate: date(12),
+        description:
+          "A refreshed identity and a portfolio website for their next chapter.",
+      },
+      {
+        ...meta("dl-2"),
+        name: "Summer campaign",
+        companyId: "co-2",
+        contactId: "ct-2",
+        value: 850000,
+        stage: "Negotiation",
+        closeDate: date(5),
+        description:
+          "Creative direction and campaign assets for the new collection.",
+      },
+      {
+        ...meta("dl-3"),
+        name: "Launch photography",
+        companyId: "co-3",
+        contactId: "ct-3",
+        value: 420000,
+        stage: "Qualified",
+        closeDate: date(18),
+        description: "Photo production for a new hospitality concept.",
+      },
+      {
+        ...meta("dl-4"),
+        name: "Product launch film",
+        companyId: "co-4",
+        contactId: "ct-4",
+        value: 1800000,
+        stage: "New lead",
+        closeDate: date(25),
+        description: "An introduction to the next generation of their product.",
+      },
+      {
+        ...meta("dl-5"),
+        name: "Retainer partnership",
+        companyId: "co-5",
+        contactId: "ct-5",
+        value: 600000,
+        stage: "Qualified",
+        closeDate: date(8),
+        description: "Ongoing creative support for the design team.",
+      },
+      {
+        ...meta("dl-6"),
+        name: "Packaging direction",
+        companyId: "co-2",
+        contactId: "ct-2",
+        value: 750000,
+        stage: "Won",
+        closeDate: date(-4),
+        description: "Completed discovery and signed creative engagement.",
+      },
+      {
+        ...meta("dl-7"),
+        name: "Studio lookbook",
+        companyId: "co-1",
+        contactId: "ct-1",
+        value: 320000,
+        stage: "New lead",
+        closeDate: date(30),
+        description: "",
+      },
+    ],
+    tasks: [
+      {
+        ...meta("tk-1"),
+        name: "Send the revised campaign proposal",
+        contactId: "ct-2",
+        dealId: "dl-2",
+        dueDate: date(0),
+        completed: false,
+        priority: "High",
+      },
+      {
+        ...meta("tk-2"),
+        name: "Follow up on the brand direction",
+        contactId: "ct-1",
+        dealId: "dl-1",
+        dueDate: date(0),
+        completed: false,
+        priority: "Normal",
+      },
+      {
+        ...meta("tk-3"),
+        name: "Schedule a discovery call with Ethan",
+        contactId: "ct-4",
+        dealId: "dl-4",
+        dueDate: date(1),
+        completed: false,
+        priority: "Normal",
+      },
+      {
+        ...meta("tk-4"),
+        name: "Share photography references",
+        contactId: "ct-3",
+        dealId: "dl-3",
+        dueDate: date(2),
+        completed: false,
+        priority: "Normal",
+      },
+    ],
+    notes: [
+      {
+        ...meta("nt-1"),
+        name: "Olivia loved the editorial direction. Send two scope options before the next call.",
+        contactId: "ct-1",
+        dealId: "dl-1",
+      },
+    ],
+    activity: [
+      {
+        id: "a-1",
+        recordId: "dl-6",
+        message: "Packaging direction moved to Won",
+        createdAt: now,
+      },
+      {
+        id: "a-2",
+        recordId: "dl-1",
+        message: "Brand identity & website moved to Proposal",
+        createdAt: now,
+      },
+      {
+        id: "a-3",
+        recordId: "ct-4",
+        message: "Ethan Brooks added to contacts",
+        createdAt: now,
+      },
+    ],
+  };
+}
