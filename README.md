@@ -1,8 +1,21 @@
 # Clientlane
 
-Your local CRM for people, companies, deals, notes, and follow-ups.
+A local CRM for contacts, companies, deals, notes and follow-ups. It runs in your browser and stores everything in a SQLite database on your own computer; nothing is hosted.
 
-[Explore the product and demos](https://clientlane-crm.vercel.app) · [Lite source and releases](https://github.com/wmbransford/clientlane-lite)
+Clientlane is for freelancers, consultants and solo operators who want their CRM data on their own machine and are comfortable installing Node.js and keeping a terminal window open while it runs. If you need a hosted CRM that a team signs into from anywhere, this is not the right fit.
+
+[Website and live demo](https://clientlanecrm.com) · [Download a release](https://github.com/wmbransford/clientlane-lite/releases) · [Clientlane Pro](https://clientlanecrm.com/purchase/)
+
+![Clientlane Lite showing contacts, pipeline value and follow-ups due (fictional sample data)](docs/lite-overview.png)
+
+## Quickstart
+
+1. Install Node.js 22.13 or newer (LTS) from https://nodejs.org.
+2. Download the latest ZIP from [Releases](https://github.com/wmbransford/clientlane-lite/releases) and extract it.
+3. Open `Start Clientlane.command` (macOS) or `Start Clientlane.cmd` (Windows), or run `sh start-clientlane.sh` (Linux). Keep the terminal open.
+4. When http://localhost:4318 opens, create your local account.
+
+The first launch installs dependencies and builds the app, which takes a few minutes and needs internet access. Details follow below.
 
 This is the **1.0.0-rc.1 release candidate**. The edition is recorded in `RELEASE-MANIFEST.json` and displayed inside the app. Use this release candidate for evaluation and keep backups before adding important data.
 
